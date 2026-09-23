@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 My Study Space 🌸 | Study Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay">
+        <div class="floating-sparkle sparkle-1">✨</div>
+        <div class="floating-sparkle sparkle-2">💖</div>
+        <div class="floating-sparkle sparkle-3">🌸</div>
+        <div class="floating-sparkle sparkle-4">🎀</div>
+        <div class="floating-sparkle sparkle-5">⭐</div>
+        <div class="floating-sparkle sparkle-6">🍓</div>
+        <div class="bg-pattern-hearts"></div>
+    </div>
+
+    <div class="planner-outer-wrapper">
+        <div class="notebook-binder">
+            <span class="binder-ring"></span>
+            <span class="binder-ring"></span>
+            <span class="binder-ring"></span>
+            <span class="binder-ring"></span>
+            <span class="binder-ring"></span>
+            <span class="binder-ring"></span>
+            <span class="binder-ring"></span>
+            <span class="binder-ring"></span>
+            <span class="binder-ring"></span>
+            <span class="binder-ring"></span>
+        </div>
+
+        <header class="planner-header">
+            <div class="header-left">
+                <div class="waving-bunny">🐰</div>
+                <div class="title-group">
+                    <h1 class="planner-title">🌸 My Study Space 🌸</h1>
+                    <p class="planner-subtitle">Stay focused. Study softly. Dream big. ✨</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="planner-tape tape-top-right">🎀 WASHI TAPE 🎀</div>
+                <div class="live-clock-card">
+                    <div id="live-date" class="live-date">Tuesday, Aug 4</div>
+                    <div id="live-time" class="live-time">04:00 PM</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-wrapper">
+
+            <aside class="sidebar glass-panel notebook-page page-left">
+                <div class="washi-tape tape-top-left"></div>
+                <div class="paper-clip clip-top-right">📎</div>
+
+                <div class="profile-area">
+                    <div class="avatar-wrapper">
+                        <div class="avatar">🌸</div>
+                        <span class="status-badge">Study Mode</span>
+                    </div>
+                    <div class="profile-text">
+                        <h2>Study Desk</h2>
+                        <span class="profile-tag">🎀 Bunny's Diary</span>
+                    </div>
+                </div>
+
+                <div class="timer-widget notebook-card">
+                    <div class="bunny-ears-container">
+                        <svg class="bunny-ear ear-left" viewBox="0 0 50 80">
+                            <path d="M25 75 C 5 50, 0 10, 25 5 C 50 10, 45 50, 25 75 Z" fill="#FFEAF3" stroke="#FFD6E7" stroke-width="3"/>
+                            <path d="M25 65 C 12 45, 8 15, 25 10 C 42 15, 38 45, 25 65 Z" fill="#F8BBD9"/>
+                        </svg>
+                        <svg class="bunny-ear ear-right" viewBox="0 0 50 80">
+                            <path d="M25 75 C 5 50, 0 10, 25 5 C 50 10, 45 50, 25 75 Z" fill="#FFEAF3" stroke="#FFD6E7" stroke-width="3"/>
+                            <path d="M25 65 C 12 45, 8 15, 25 10 C 42 15, 38 45, 25 65 Z" fill="#F8BBD9"/>
+                        </svg>
+                    </div>
+
+                    <h3 class="widget-title">🐰 Focus Bunny</h3>
+
+                    <div class="timer-ring-container">
+                        <svg class="timer-ring" viewBox="0 0 120 120">
+                            <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                            <circle class="ring-progress" id="timer-progress-ring" cx="60" cy="60" r="52"></circle>
+                        </svg>
+                        <div class="timer-inner">
+                            <span id="timer-display">25:00</span>
+                            <span class="timer-mode-label" id="timer-mode-label">Study Time 📖</span>
+                        </div>
+                    </div>
+
+                    <div class="timer-controls">
+                        <button id="timer-btn" class="cute-btn primary-btn">Start</button>
+                        <button id="timer-reset-btn" class="cute-btn secondary-btn" title="Reset Timer">🔄 Reset</button>
+                    </div>
+
+                    <div class="timer-modes">
+                        <button class="mode-pill active" data-time="1500" data-label="Study Time 📖">Timer (25m)</button>
+                        <button class="mode-pill" data-time="300" data-label="Short Break 🍓">Short Break (5m)</button>
+                        <button class="mode-pill" data-time="900" data-label="Long Break 🧸">Long Break (15m)</button>
+                    </div>
+                </div>
+
+                <div class="music-widget glass-panel notebook-card">
+                    <div class="music-card-header">
+                        <span class="ribbon-tag">🎀 Lofi Station</span>
+                        <div class="music-notes-container" id="music-notes-box"></div>
+                    </div>
+
+                    <div class="track-info">
+                        <div class="album-cover-box">
+                            <img src="lofi_cover.jpg" alt="Cute Bunny Lofi Cover" class="album-img" id="album-cover">
+                            <span class="music-icon animate-pulse">🎵</span>
+                        </div>
+                        <div class="track-details">
+                            <h4 id="track-title">Lo-Fi Study Beats</h4>
+                            <p id="track-artist">Ambient Stream</p>
+                        </div>
+                    </div>
+
+                    <audio id="audio-player" src=""></audio>
+
+                    <div class="player-controls">
+                        <button id="prev-btn" class="player-btn" title="Previous Track">⏮️</button>
+                        <button id="play-btn" class="player-btn play-main" title="Play / Pause">▶️</button>
+                        <button id="next-btn" class="player-btn" title="Next Track">⏭️</button>
+                    </div>
+
+                    <div class="player-sliders">
+                        <div class="slider-row">
+                            <span class="slider-time" id="current-time-text">0:00</span>
+                            <input type="range" id="progress-bar" value="0" max="100" class="cute-slider">
+                            <span class="slider-time" id="duration-time-text">--:--</span>
+                        </div>
+                        <div class="volume-container">
+                            <span>🔊</span>
+                            <input type="range" id="volume-slider" value="50" max="100" class="cute-slider">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mood-widget notebook-card">
+                    <h3 class="widget-title">🍓 How are you feeling?</h3>
+                    <div class="mood-options">
+                        <button class="mood-btn" data-mood="Happy">😊</button>
+                        <button class="mood-btn" data-mood="Loved">🥰</button>
+                        <button class="mood-btn" data-mood="Calm">😐</button>
+                        <button class="mood-btn" data-mood="Sleepy">😴</button>
+                        <button class="mood-btn" data-mood="Stressed">😭</button>
+                    </div>
+                    <p class="mood-status-text" id="mood-status-text">Select your mood for today ✨</p>
+                </div>
+
+                <div class="quote-widget notebook-card sticky-note-style">
+                    <div class="tape-corner"></div>
+                    <div class="quote-content">
+                        <span class="quote-flower">🌸</span>
+                        <p id="daily-quote-text">"Small progress every day adds up to big results!"</p>
+                    </div>
+                    <button class="refresh-quote-btn" id="refresh-quote-btn">✨ New Sparkle</button>
+                </div>
+            </aside>
+
+            <section class="workspace glass-panel notebook-page page-right">
+                <div class="washi-tape tape-top-right-pink"></div>
+                <div class="paper-clip clip-top-left">📎</div>
+
+                <div class="task-section-header">
+                    <h2 class="section-title">📝 Today's Study Tasks</h2>
+                    <span class="task-count-badge" id="task-count-badge">0 Tasks</span>
+                </div>
+
+                <header class="workspace-header">
+                    <div class="input-wrapper">
+                        <span class="input-icon">✏️</span>
+                        <input type="text" id="todo-input" placeholder="Add a new goal, assignment or memory...">
+                    </div>
+                    <button id="add-todo-btn" class="cute-btn primary-btn">✨ Add Goal</button>
+                </header>
+
+                <div id="todo-grid" class="todo-grid"></div>
+
+                <div class="workspace-lower-grid">
+                    
+                    <div class="schedule-widget notebook-card">
+                        <h3 class="widget-title">⏰ Today's Schedule</h3>
+                        <div class="schedule-timeline">
+                            <div class="schedule-item">
+                                <span class="time-badge">07:00</span>
+                                <span class="timeline-bunny">🐰</span>
+                                <input type="text" class="schedule-input" data-time="07:00" placeholder="Morning routine & breakfast ☕">
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-badge">09:00</span>
+                                <span class="timeline-bunny">🐰</span>
+                                <input type="text" class="schedule-input" data-time="09:00" placeholder="Deep Focus Study Block #1 📖">
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-badge">11:00</span>
+                                <span class="timeline-bunny">🐰</span>
+                                <input type="text" class="schedule-input" data-time="11:00" placeholder="Revision & Practice Problems ✍️">
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-badge">01:00</span>
+                                <span class="timeline-bunny">🐰</span>
+                                <input type="text" class="schedule-input" data-time="01:00" placeholder="Yummy Lunch & Rest Break 🍓">
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-badge">03:00</span>
+                                <span class="timeline-bunny">🐰</span>
+                                <input type="text" class="schedule-input" data-time="03:00" placeholder="Focus Study Block #2 💡">
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-badge">05:00</span>
+                                <span class="timeline-bunny">🐰</span>
+                                <input type="text" class="schedule-input" data-time="05:00" placeholder="Review notes & tidy workspace 🎀">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notes-widget notebook-card ruled-paper">
+                        <div class="ruled-margin-line"></div>
+                        <div class="notes-header">
+                            <h3 class="widget-title">💖 Quick Study Notes</h3>
+                            <span class="handwriting-sub">Heart Bullets & Ideas</span>
+                        </div>
+                        <textarea id="study-notes-area" class="study-notes-textarea" placeholder="💗 Key formulas...&#10;💗 Vocabulary words...&#10;💗 Important textbook pages to review..."></textarea>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="planner-footer">
+            <span>Made by: Eram Fatima for soft study sessions • 🎀 Bunny Aesthetic Planner</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
